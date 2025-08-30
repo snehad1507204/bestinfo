@@ -1,0 +1,143 @@
+/* Basic Navbar Styles */
+.navbar {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f0f0f0; 
+  color: #333; 
+  z-index: 1000; 
+  padding: 10px 15px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Reduced gap for compact design */
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 35px; /* Slightly smaller logo */
+  width: 35px;
+  border-radius: 50%;  
+  object-fit: cover;   
+  display: block;
+}
+
+.logo-text {
+  color: #333; /* Dark gray for professional look */
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Navbar Links */
+.nav-menu {
+  display: flex;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem; /* Reduced gap between navbar links */
+}
+
+.nav-links a {
+  color: #333; /* Dark gray text color */
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #3498db; /* Light blue hover effect */
+  border-bottom: 2px solid #3498db; /* Underline on hover */
+}
+
+/* Active Link */
+.nav-links a.active {
+  color: #3498db;
+  border-bottom: 2px solid #3498db;
+}
+
+/* Right side margin for 'Contact' */
+.nav-links li:last-child a {
+  padding-right: 20px; /* Added space to the right of the 'Contact' link */
+}
+
+/* Hamburger Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* Toggle animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #f0f0f0; /* Light gray background for mobile */
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu.open {
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav-links a {
+    font-size: 18px; /* Larger text for mobile */
+    padding: 14px 0;
+  }
+}
