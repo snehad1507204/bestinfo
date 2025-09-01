@@ -1,0 +1,47 @@
+.home-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Global styles that might be needed */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Container utility class */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section spacing */
+section {
+  padding: 80px 0;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 40px 0;
+  }
+}
