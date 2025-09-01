@@ -7,29 +7,29 @@ const HeroSection = () => {
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
-            Transforming Ideas into 
-            <span className="highlight"> Digital Excellence</span>
+            Connecting Talent with 
+            <span className="highlight"> Opportunity</span>
           </h1>
           <p className="hero-description">
-            We are a cutting-edge technology company specializing in innovative 
-            software solutions, AI-driven applications, and digital transformation 
-            services that propel businesses into the future.
+            Best Infosystems Ltd. is a leading staffing and recruiting company based in Delhi, 
+            specializing in IT, ITES, Banking, SCM, and Telecom sectors. We help businesses 
+            find the right talent to drive success and growth.
           </p>
           <div className="hero-buttons">
-            <button className="btn-primary">Get Started</button>
-            <button className="btn-secondary">Learn More</button>
+            <button className="btn-primary" onClick={() => window.location.href='/contact'}>Get Started</button>
+            <button className="btn-secondary" onClick={() => window.location.href='/about'}>Learn More</button>
           </div>
         </div>
-        <div className="hero-visual">
-          <div className="hero-image-placeholder">
-            <div className="tech-animation">
-              <div className="circle circle-1"></div>
-              <div className="circle circle-2"></div>
-              <div className="circle circle-3"></div>
-              <div className="main-tech-icon">🚀</div>
+          <div className="hero-visual">
+            <div className="hero-image-placeholder">
+              <div className="tech-animation">
+                <div className="circle circle-1"></div>
+                <div className="circle circle-2"></div>
+                <div className="circle circle-3"></div>
+                <div className="main-tech-icon">🚀</div>
+              </div>
             </div>
           </div>
-        </div>
       </div>
     </section>
   );

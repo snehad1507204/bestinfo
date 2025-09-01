@@ -4,40 +4,34 @@ import './Services.css';
 const Services = () => {
   const services = [
     {
-      icon: '💻',
-      title: 'Web Development',
-      description: 'Modern, responsive websites and web applications built with cutting-edge technologies like React, Node.js, and modern frameworks.',
-      features: ['Responsive Design', 'SEO Optimized', 'Fast Performance']
+      icon: '👥',
+      title: 'IT Staffing',
+      description: 'Providing skilled IT professionals to meet your project and business needs.',
+      features: ['Contract Staffing', 'Permanent Staffing', 'Contract-to-Hire']
     },
     {
-      icon: '📱',
-      title: 'Mobile Apps',
-      description: 'Native and cross-platform mobile applications for iOS and Android with seamless user experiences.',
-      features: ['iOS & Android', 'Cross-Platform', 'Native Performance']
+      icon: '🔍',
+      title: 'Recruitment Process Outsourcing',
+      description: 'Comprehensive recruitment solutions to streamline your hiring process.',
+      features: ['Candidate Sourcing', 'Screening & Interviewing', 'Onboarding Support']
     },
     {
-      icon: '🤖',
-      title: 'AI Solutions',
-      description: 'Artificial Intelligence and Machine Learning solutions to automate processes and gain valuable insights.',
-      features: ['Machine Learning', 'Data Analysis', 'Automation']
+      icon: '🎯',
+      title: 'Talent Acquisition',
+      description: 'Strategic hiring to attract and retain top talent in IT, Banking, and Telecom sectors.',
+      features: ['Executive Search', 'Campus Hiring', 'Diversity Hiring']
     },
     {
-      icon: '☁️',
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and deployment solutions for businesses of all sizes.',
-      features: ['AWS & Azure', 'Scalable', 'Secure']
+      icon: '🌐',
+      title: 'Global Staffing',
+      description: 'Connecting businesses with talent across multiple geographies and industries.',
+      features: ['International Recruitment', 'Visa & Relocation Support', 'Compliance Management']
     },
     {
-      icon: '🔒',
-      title: 'Cyber Security',
-      description: 'Comprehensive security solutions to protect your digital assets and customer data.',
-      features: ['Data Protection', 'Threat Detection', 'Compliance']
-    },
-    {
-      icon: '📊',
-      title: 'Data Analytics',
-      description: 'Turn your data into actionable insights with advanced analytics and visualization tools.',
-      features: ['Data Visualization', 'Real-time Analytics', 'Custom Reports']
+      icon: '📈',
+      title: 'Consulting Services',
+      description: 'Expert advice on workforce planning, HR strategy, and talent management.',
+      features: ['Workforce Analytics', 'HR Policy Development', 'Training & Development']
     }
   ];
 
@@ -47,7 +41,7 @@ const Services = () => {
         <div className="services-header">
           <h2 className="section-title">Our Services</h2>
           <p className="section-subtitle">
-            Comprehensive technology solutions tailored to your business needs
+            Comprehensive staffing and recruiting solutions tailored to your business needs
           </p>
         </div>
         
@@ -71,6 +65,5 @@ const Services = () => {
       </div>
     </section>
   );
-};
-
+}
 export default Services;

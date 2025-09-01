@@ -7,35 +7,36 @@ const AboutUs = () => {
       <div className="container">
         <div className="about-content">
           <div className="about-text">
-            <h2>About BestInfo Systems</h2>
+            <h2>About Best Infosystems Ltd.</h2>
             <p>
-              BestInfo Systems is a leading technology solutions provider dedicated to 
-              delivering innovative software development, IT consulting, and digital 
-              transformation services. With years of experience and a team of skilled 
-              professionals, we help businesses leverage technology to achieve their 
-              goals and stay ahead in the competitive market.
+              Best Infosystems Ltd. is a premier staffing and recruiting company based in Delhi, 
+              dedicated to connecting top talent with leading organizations. With over 30 years 
+              of experience, we specialize in IT, ITES, Banking, SCM, and Telecom sectors, providing 
+              customized recruitment solutions to meet the dynamic needs of our clients.
             </p>
             <div className="about-stats">
               <div className="stat">
-                <h3>50+</h3>
-                <p>Projects Completed</p>
+                <h3>145,000+</h3>
+                <p>Followers on LinkedIn</p>
               </div>
               <div className="stat">
-                <h3>25+</h3>
-                <p>Happy Clients</p>
+                <h3>1000+</h3>
+                <p>Successful Placements</p>
               </div>
               <div className="stat">
-                <h3>15+</h3>
-                <p>Expert Developers</p>
+                <h3>30+</h3>
+                <p>Years of Experience</p>
               </div>
             </div>
-            <button className="btn-primary">Learn More About Us</button>
+            <button className="btn-primary" onClick={() => window.location.href='/about'}>
+              Learn More About Us
+            </button>
           </div>
           <div className="about-image">
             <div className="tech-illustration">
-              <div className="tech-icon">💻</div>
-              <div className="tech-icon">🌐</div>
-              <div className="tech-icon">📱</div>
+              <div className="tech-icon">🤝</div>
+              <div className="tech-icon">📈</div>
+              <div className="tech-icon">🏢</div>
             </div>
           </div>
         </div>
