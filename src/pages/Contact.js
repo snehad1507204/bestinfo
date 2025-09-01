@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Contact.css';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = React.useState({
     name: '',
     email: '',
     phone: '',
@@ -35,19 +35,19 @@ const Contact = () => {
     {
       icon: '📧',
       title: 'Email',
-      info: 'info@bestinfosystems.com',
-      link: 'mailto:info@bestinfosystems.com'
+      info: 'info@bestinfosystems.co.in',
+      link: 'mailto:info@bestinfosystems.co.in'
     },
     {
       icon: '📞',
       title: 'Phone',
-      info: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      info: '+91 98765 43210',
+      link: 'tel:+919876543210'
     },
     {
       icon: '📍',
       title: 'Address',
-      info: '123 Tech Street, Innovation City, IC 12345',
+      info: 'Delhi, India',
       link: '#'
     },
     {
@@ -65,7 +65,7 @@ const Contact = () => {
         <div className="container">
           <h1>Get In Touch</h1>
           <p className="hero-subtitle">
-            Ready to transform your business? Let's discuss your project and how we can help.
+            Ready to connect with the best talent? Reach out to us today.
           </p>
         </div>
       </section>

@@ -4,34 +4,34 @@ import './Services.css';
 const Services = () => {
   const services = [
     {
-      title: "Web Development",
-      description: "Custom web applications and responsive websites built with modern technologies.",
-      icon: "💻"
+      title: "IT Staffing",
+      description: "Providing skilled IT professionals for contract, permanent, and contract-to-hire positions across various technologies.",
+      icon: "👥"
     },
     {
-      title: "Mobile Apps",
-      description: "Native and cross-platform mobile applications for iOS and Android.",
-      icon: "📱"
+      title: "ITES Recruitment",
+      description: "Specialized recruitment for Information Technology Enabled Services including BPO, KPO, and customer support roles.",
+      icon: "🔍"
     },
     {
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and deployment solutions.",
-      icon: "☁️"
+      title: "Banking & Finance Staffing",
+      description: "Expert recruitment for banking, financial services, and FinTech companies with compliance and regulatory expertise.",
+      icon: "🏦"
     },
     {
-      title: "AI & Machine Learning",
-      description: "Intelligent solutions powered by artificial intelligence and machine learning.",
-      icon: "🤖"
+      title: "SCM & Logistics Recruitment",
+      description: "Supply Chain Management and logistics professionals for procurement, warehousing, and distribution roles.",
+      icon: "📦"
     },
     {
-      title: "UI/UX Design",
-      description: "User-centered design that creates exceptional digital experiences.",
-      icon: "🎨"
+      title: "Telecom Staffing Solutions",
+      description: "Telecommunications specialists for network operations, customer service, and technical support positions.",
+      icon: "📡"
     },
     {
-      title: "DevOps & Automation",
-      description: "Streamlined development workflows and automated deployment pipelines.",
-      icon: "⚙️"
+      title: "Executive Search",
+      description: "Senior-level recruitment and executive search services for leadership and management positions.",
+      icon: "👔"
     }
   ];
 

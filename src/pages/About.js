@@ -4,42 +4,42 @@ import './About.css';
 const About = () => {
   const teamMembers = [
     {
-      name: 'John Smith',
-      role: 'CEO & Founder',
+      name: 'Mr. Rajesh Sachan',
+      role: 'Founder & Chairman',
       image: '👨‍💼',
-      description: 'Technology visionary with 15+ years of experience in software development and business strategy.',
+      description: 'Founder of Best Infosystems Ltd., with extensive experience in staffing and recruiting across IT and Telecom sectors.',
       social: ['💼', '🐦', '🔗']
     },
     {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      image: '👩‍💻',
-      description: 'Expert in cloud architecture and scalable systems with a passion for innovation.',
+      name: 'Ms. Anjali Sharma',
+      role: 'Managing Director',
+      image: '👩‍💼',
+      description: 'Leading the company with a focus on client relationships and business growth in staffing solutions.',
       social: ['💼', '🐦', '🔗']
     },
     {
-      name: 'Mike Chen',
-      role: 'Lead Developer',
-      image: '👨‍💻',
-      description: 'Full-stack developer specializing in React, Node.js, and modern web technologies.',
+      name: 'Mr. Amit Verma',
+      role: 'Head of Recruitment',
+      image: '👨‍💼',
+      description: 'Expert in talent acquisition and recruitment process outsourcing for IT and Telecom industries.',
       social: ['💼', '🐦', '🔗']
     },
     {
-      name: 'Emily Davis',
-      role: 'UX/UI Designer',
-      image: '👩‍🎨',
-      description: 'Creative designer focused on creating intuitive and beautiful user experiences.',
+      name: 'Ms. Priya Singh',
+      role: 'HR Manager',
+      image: '👩‍💼',
+      description: 'Responsible for internal HR operations and employee engagement.',
       social: ['💼', '🐦', '🔗']
     }
   ];
 
   const milestones = [
-    { year: '2018', event: 'Company Founded', description: 'Started with a vision to deliver exceptional technology solutions' },
-    { year: '2019', event: 'First Major Client', description: 'Secured our first enterprise client and delivered successful projects' },
-    { year: '2020', event: 'Team Expansion', description: 'Grew our team to 10+ skilled professionals across various domains' },
-    { year: '2021', event: 'Cloud Partnership', description: 'Became certified partners with major cloud providers' },
-    { year: '2022', event: 'AI Division Launch', description: 'Established dedicated AI and machine learning division' },
-    { year: '2023', event: '50+ Projects', description: 'Successfully delivered over 50 projects to satisfied clients' }
+    { year: '1992', event: 'Company Founded', description: 'Established Best Infosystems Ltd. with a vision to provide top staffing solutions.' },
+    { year: '2000', event: 'Expanded Services', description: 'Broadened recruitment services to include IT, Banking, and Telecom sectors.' },
+    { year: '2010', event: 'National Presence', description: 'Established offices across major cities in India.' },
+    { year: '2015', event: 'International Clients', description: 'Started serving clients globally with customized staffing solutions.' },
+    { year: '2020', event: 'Digital Transformation', description: 'Integrated technology to enhance recruitment processes.' },
+    { year: '2024', event: '145,000+ LinkedIn Followers', description: 'Achieved significant social media presence and brand recognition.' }
   ];
 
   return (
@@ -47,9 +47,9 @@ const About = () => {
       {/* Hero Section */}
       <section className="about-hero">
         <div className="container">
-          <h1>About BestInfo Systems</h1>
+          <h1>About Best Infosystems Ltd.</h1>
           <p className="hero-subtitle">
-            Transforming businesses through innovative technology solutions since 2018
+            Leading staffing and recruiting company based in Delhi, connecting talent with opportunity since 1992.
           </p>
         </div>
       </section>
@@ -61,40 +61,36 @@ const About = () => {
             <div className="story-text">
               <h2>Our Story</h2>
               <p>
-                BestInfo Systems was founded in 2018 with a simple mission: to help businesses 
-                leverage technology to achieve their goals. What started as a small team of 
-                passionate developers has grown into a comprehensive technology solutions provider.
+                Best Infosystems Ltd. was founded in 1992 with a mission to provide exceptional staffing and recruiting services. 
+                Over the years, we have grown into a trusted partner for businesses across IT, Banking, SCM, and Telecom sectors.
               </p>
               <p>
-                Today, we work with businesses of all sizes, from startups to enterprises, 
-                helping them navigate the complex world of technology and digital transformation. 
-                Our team of experts brings together diverse skills in software development, 
-                cloud computing, AI, and cybersecurity.
+                Our commitment to quality and client satisfaction has helped us build long-lasting relationships and a strong reputation in the industry.
               </p>
               <div className="stats-grid">
                 <div className="stat-item">
+                  <h3>145,000+</h3>
+                  <p>LinkedIn Followers</p>
+                </div>
+                <div className="stat-item">
+                  <h3>1000+</h3>
+                  <p>Successful Placements</p>
+                </div>
+                <div className="stat-item">
+                  <h3>30+</h3>
+                  <p>Years of Experience</p>
+                </div>
+                <div className="stat-item">
                   <h3>50+</h3>
-                  <p>Projects Completed</p>
-                </div>
-                <div className="stat-item">
-                  <h3>25+</h3>
-                  <p>Happy Clients</p>
-                </div>
-                <div className="stat-item">
-                  <h3>15+</h3>
-                  <p>Team Members</p>
-                </div>
-                <div className="stat-item">
-                  <h3>5+</h3>
-                  <p>Years Experience</p>
+                  <p>Dedicated Team Members</p>
                 </div>
               </div>
             </div>
             <div className="story-image">
-              <div className="tech-illustration-large">
-                <div className="floating-icon">🚀</div>
-                <div className="floating-icon">💡</div>
-                <div className="floating-icon">🌐</div>
+              <div className="staff-illustration-large">
+                <div className="floating-icon">🤝</div>
+                <div className="floating-icon">🏢</div>
+                <div className="floating-icon">📈</div>
               </div>
             </div>
           </div>
@@ -108,16 +104,13 @@ const About = () => {
             <div className="mv-card">
               <h3>Our Mission</h3>
               <p>
-                To empower businesses with cutting-edge technology solutions that drive growth, 
-                innovation, and digital transformation. We believe in making technology accessible 
-                and beneficial for all.
+                To connect the right talent with the right opportunities, empowering businesses to grow and succeed.
               </p>
             </div>
             <div className="mv-card">
               <h3>Our Vision</h3>
               <p>
-                To be the leading technology partner for businesses worldwide, known for our 
-                innovation, reliability, and commitment to client success in the digital age.
+                To be the most trusted staffing partner recognized for excellence, innovation, and client satisfaction.
               </p>
             </div>
           </div>

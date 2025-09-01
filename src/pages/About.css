@@ -79,39 +79,45 @@
 .story-image {
   display: flex;
   justify-content: center;
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
 }
 
 .tech-illustration-large {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 320px;
+  height: 320px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: visible;
 }
 
 .floating-icon {
   font-size: 4rem;
   position: absolute;
   animation: float 3s ease-in-out infinite;
+  user-select: none;
 }
 
 .floating-icon:nth-child(1) {
-  top: 20%;
-  left: 20%;
+  top: 15%;
+  left: 15%;
   animation-delay: 0s;
 }
 
 .floating-icon:nth-child(2) {
   top: 60%;
-  right: 20%;
+  right: 15%;
   animation-delay: 1s;
 }
 
 .floating-icon:nth-child(3) {
-  bottom: 20%;
+  bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
   animation-delay: 2s;
