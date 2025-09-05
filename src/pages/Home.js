@@ -2,6 +2,9 @@ import React from 'react';
 import HeroSection from '../components/HeroSection';
 import Services from '../components/Services';
 import AboutUs from '../components/AboutUs';
+import Partnerships from '../components/Partnerships';
+import WhyChooseUs from '../components/WhyChooseUs';
+
 import './Home.css';
 
 const Home = () => {
@@ -10,6 +13,10 @@ const Home = () => {
       <HeroSection />
       <Services />
       <AboutUs />
+      <WhyChooseUs />
+      <Partnerships />
+      
+      
     </div>
   );
 };

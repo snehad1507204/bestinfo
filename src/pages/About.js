@@ -49,7 +49,7 @@ const About = () => {
         <div className="container">
           <h1>About Best Infosystems Ltd.</h1>
           <p className="hero-subtitle">
-            Leading staffing and recruiting company based in Delhi, connecting talent with opportunity since 1992.
+            Leading staffing and recruiting company based in Delhi, connecting talent with opportunity since 1999.
           </p>
         </div>
       </section>
@@ -61,7 +61,7 @@ const About = () => {
             <div className="story-text">
               <h2>Our Story</h2>
               <p>
-                Best Infosystems Ltd. was founded in 1992 with a mission to provide exceptional staffing and recruiting services. 
+                Best Infosystems Ltd. was founded in 1999 with a mission to provide exceptional staffing and recruiting services. 
                 Over the years, we have grown into a trusted partner for businesses across IT, Banking, SCM, and Telecom sectors.
               </p>
               <p>
@@ -77,11 +77,11 @@ const About = () => {
                   <p>Successful Placements</p>
                 </div>
                 <div className="stat-item">
-                  <h3>30+</h3>
+                  <h3>25+</h3>
                   <p>Years of Experience</p>
                 </div>
                 <div className="stat-item">
-                  <h3>50+</h3>
+                  <h3>100+</h3>
                   <p>Dedicated Team Members</p>
                 </div>
               </div>
