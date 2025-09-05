@@ -1,5 +1,6 @@
 import React from 'react';
 import './AboutUs.css';
+import aboutImage from '../assets/about-sec.png';
 
 const AboutUs = () => {
   return (
@@ -10,7 +11,7 @@ const AboutUs = () => {
             <h2>About Best Infosystems Ltd.</h2>
             <p>
               Best Infosystems Ltd. is a premier staffing and recruiting company based in Delhi, 
-              dedicated to connecting top talent with leading organizations. With over 30 years 
+              dedicated to connecting top talent with leading organizations. With over 26 years 
               of experience, we specialize in IT, ITES, Banking, SCM, and Telecom sectors, providing 
               customized recruitment solutions to meet the dynamic needs of our clients.
             </p>
@@ -24,7 +25,7 @@ const AboutUs = () => {
                 <p>Successful Placements</p>
               </div>
               <div className="stat">
-                <h3>30+</h3>
+                <h3>25+</h3>
                 <p>Years of Experience</p>
               </div>
             </div>
@@ -33,11 +34,7 @@ const AboutUs = () => {
             </button>
           </div>
           <div className="about-image">
-            <div className="tech-illustration">
-              <div className="tech-icon">🤝</div>
-              <div className="tech-icon">📈</div>
-              <div className="tech-icon">🏢</div>
-            </div>
+            <img src={aboutImage} alt="About Us" />
           </div>
         </div>
       </div>

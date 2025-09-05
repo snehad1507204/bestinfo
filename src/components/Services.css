@@ -1,7 +1,7 @@
 .services-section {
   padding: 80px 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: #ffffff;
+  color: #030303;
 }
 
 .container {
@@ -17,28 +17,40 @@
 .section-title {
   font-size: 3rem;
   font-weight: 700;
-  color: white;
+  color: #000000;
   margin-bottom: 16px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .section-subtitle {
   font-size: 1.2rem;
-  color: #e8f4f8;
+  color: #000000;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+.slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   margin-top: 50px;
 }
 
+.slider-window {
+  overflow: hidden;
+  width: 100%;
+}
+
+.services-grid {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
 .service-card {
-  background: rgba(255, 255, 255, 0.95);
+  box-sizing: border-box;
   padding: 30px 25px;
   border-radius: 15px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
@@ -46,7 +58,27 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(10px);
+  margin: 0 10px;
+}
+
+.service-card-0 {
+  background: linear-gradient(135deg, #b35a6a, #a35a6a);
+}
+
+.service-card-1 {
+  background: linear-gradient(135deg, #6a8e8e, #7a6a6a);
+}
+
+.service-card-2 {
+  background: linear-gradient(135deg, #8a5a6a, #7a6a5a);
+}
+
+.service-card-3 {
+  background: linear-gradient(135deg, #a05a5a, #a05a4a);
+}
+
+.service-card-4 {
+  background: linear-gradient(135deg, #3a6afe, #0050fe);
 }
 
 .service-card::before {
@@ -83,15 +115,23 @@
 .service-title {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: #000000;
   margin-bottom: 15px;
 }
 
 .service-description {
-  color: #34495e;
+  color: #000000; /* Changed to black for better visibility */
   line-height: 1.6;
   margin-bottom: 20px;
   font-size: 0.95rem;
+}
+
+.css-color-title {
+  color: #000000 !important;
+}
+
+.css-color-description {
+  color: #000000 !important;
 }
 
 .service-features {
@@ -135,6 +175,62 @@
   background: linear-gradient(135deg, #5a67d8, #6b46c1);
 }
 
+/* Mobile grid for services */
+.services-mobile-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.services-mobile-grid .service-card {
+  width: 100%;
+  margin: 0;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 24px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.slider-arrow:hover:not(:disabled) {
+  background: linear-gradient(135deg, #5a67d8, #6b46c1);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slider-arrow:disabled {
+  background: #ccc;
+  color: #999;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: translateY(-50%);
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .services-section {
@@ -145,13 +241,9 @@
     font-size: 2.5rem;
   }
 
-  .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-  }
-
   .service-card {
     padding: 25px 20px;
+    margin: 0;
   }
 
   .service-icon {
@@ -167,10 +259,6 @@
 
   .section-subtitle {
     font-size: 1rem;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
   }
 
   .service-card {

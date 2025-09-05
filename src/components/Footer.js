@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { FaYoutube, FaInstagram, FaFacebook, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -18,12 +19,21 @@ const Footer = () => {
               We deliver cutting-edge software development, AI solutions, and 
               digital transformation services.
             </p>
-            <div className="social-links">
-              <a href="#" className="social-link">📘</a>
-              <a href="#" className="social-link">🐦</a>
-              <a href="#" className="social-link">📸</a>
-              <a href="#" className="social-link">🔗</a>
-            </div>
+            {/* Social Media Icons */}
+                      <div className="social-icons">
+                        <a href="https://youtube.com" aria-label="YouTube">
+                          <FaYoutube />
+                        </a>
+                        <a href="https://instagram.com" aria-label="Instagram">
+                          <FaInstagram />
+                        </a>
+                        <a href="https://facebook.com" aria-label="Facebook">
+                          <FaFacebook />
+                        </a>
+                        <a href="https://linkedin.com" aria-label="LinkedIn">
+                          <FaLinkedin />
+                        </a>
+                      </div>
           </div>
 
           {/* Quick Links */}
@@ -56,7 +66,7 @@ const Footer = () => {
             <div className="contact-info">
               <div className="contact-item">
                 <span className="contact-icon">📍</span>
-                <span>123 Tech Street, Innovation City</span>
+                <span> Laxmi Nagar Vikas Marg,Delhi 110092, IN</span>
               </div>
               <div className="contact-item">
                 <span className="contact-icon">📧</span>

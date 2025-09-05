@@ -22,12 +22,7 @@ const HeroSection = () => {
         </div>
           <div className="hero-visual">
             <div className="hero-image-placeholder">
-              <div className="tech-animation">
-                <div className="circle circle-1"></div>
-                <div className="circle circle-2"></div>
-                <div className="circle circle-3"></div>
-                <div className="main-tech-icon">🚀</div>
-              </div>
+              <img src={require('../assets/main1.jpeg')} alt="Main" className="hero-image" />
             </div>
           </div>
       </div>
