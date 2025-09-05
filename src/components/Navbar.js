@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
+import ServicesMenu from "./ServicesMenu";
 import './Navbar.css'; // Add your styles here
 
 const TopBar = () => {
@@ -23,10 +24,10 @@ const TopBar = () => {
       </div>
       <div className="topbar-right">
         <div className="social-icons">
-          <a href="#"><i className="fab fa-facebook-f" /></a>
-          <a href="#"><i className="fab fa-twitter" /></a>
-          <a href="#"><i className="fab fa-linkedin-in" /></a>
-          <a href="#"><i className="fab fa-instagram" /></a>
+          <a href="/"><i className="fab fa-facebook-f" /></a>
+          <a href="/"><i className="fab fa-twitter" /></a>
+          <a href="/"><i className="fab fa-linkedin-in" /></a>
+          <a href="/"><i className="fab fa-instagram" /></a>
         </div>
         <div className="contact-info">
           <span>📧 feedback@bestinfosystems.com</span>
@@ -39,17 +40,15 @@ const TopBar = () => {
 
 const MainNav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState(null); 
   const location = useLocation();
 
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/About' },
-    { name: 'Services', path: '/Services' },
+    { name: 'Services', path: '#', component: <ServicesMenu /> }, 
     { name: 'Industries', path: '#' },
-    { name: 'Insights', path: '#' },
-    { name: 'Solutions', path: '#' },
-    { name: 'Blogs', path: '/BLogs' },
-    { name: 'Media', path: '#' },
+    { name: 'Blogs', path: '/Blogs' },
     { name: 'Career Opportunities', path: '#' },
     { name: 'Contact us', path: '/Contact' },
   ];
@@ -63,13 +62,32 @@ const MainNav = () => {
       <div className="logo">
         <img src={require('../assets/logo.png')} alt="Logo" className="mobile-logo" />
       </div>
+
       <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
         {navItems.map((item, idx) => (
-          <li key={idx}>
-            <Link to={item.path} className={location.pathname === item.path ? 'active' : ''} onClick={() => setIsOpen(false)}>{item.name}</Link>
+          <li
+            key={idx}
+            className={`menu-item ${location.pathname === item.path ? 'active' : ''}`}
+            onMouseEnter={() => setOpenMenu(idx)}
+            onMouseLeave={() => setOpenMenu(null)}
+          >
+            <Link
+              to={item.path}
+              onClick={() => setIsOpen(false)}
+            >
+              {item.name}
+            </Link>
+
+            {/* 👇 Agar component mila to render hoga */}
+            {item.component && openMenu === idx && (
+              <div className="mega-menu">
+                {item.component}
+              </div>
+            )}
           </li>
         ))}
       </ul>
+
       <div className="hamburger" onClick={toggleMenu}>
         <i className={isOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
       </div>
