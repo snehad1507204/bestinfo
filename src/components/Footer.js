@@ -11,8 +11,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="footer-section">
             <div className="footer-logo">
-              <span className="logo-text">BestInfo</span>
-              <span className="logo-subtext">Systems</span>
+              <span className="logo-text">BEST INFOSYSTEMS</span>
+              <span className="logo-subtext"></span>
             </div>
             <p className="footer-description">
               Transforming businesses through innovative technology solutions. 
@@ -52,11 +52,11 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="footer-title">Our Services</h3>
             <ul className="footer-links">
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Mobile Apps</a></li>
-              <li><a href="#">AI Solutions</a></li>
-              <li><a href="#">Cloud Services</a></li>
-              <li><a href="#">Cyber Security</a></li>
+              <li><a href="#">Health Care Pharma</a></li>
+              <li><a href="#">IT Development</a></li>
+              <li><a href="#">IT Recruitment</a></li>
+              <li><a href="#">IT Training</a></li>
+              <li><a href="#">Staffing-Non IT</a></li>
             </ul>
           </div>
 

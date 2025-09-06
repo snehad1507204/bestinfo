@@ -94,11 +94,19 @@
     gap: 40px;
     text-align: center;
   }
-  
+
+  .about-text {
+    order: 2; /* Text after image in responsive */
+  }
+
+  .about-image {
+    order: 1; /* Image first in responsive */
+  }
+
   .about-text h2 {
     font-size: 2rem;
   }
-  
+
   .about-stats {
     grid-template-columns: 1fr;
     gap: 20px;

@@ -126,6 +126,15 @@
   color: #007bff;
 }
 
+/* Dropdown icon styling */
+.nav-links a svg {
+  transition: transform 0.3s ease;
+}
+
+.nav-links li.services:hover a svg {
+  transform: rotate(180deg);
+}
+
 .nav-links.open {
   display: flex;
   flex-direction: column;
@@ -148,8 +157,8 @@
 .mega-menu {
   position: absolute;
   top: 100%;
-  left: 10%;
-  transform: translateX(-20%); 
+  left: 50%;
+  transform: translateX(-50%);
   width: 900px;
   height: 570px;
   background: #fff;
@@ -303,13 +312,4 @@
   }
 }
 
-/* Show mega menu on hover and keep it fixed while hovering the menu itself */
-.nav-links li.services:hover .mega-menu,
-.mega-menu:hover {
-  display: flex; /* or block if you want column layout */
-}
-
-/* Initially hide mega menu */
-/* .mega-menu {
-  display: none; /* keep this by default *
-} */
+/* Mega menu visibility controlled by JS state */

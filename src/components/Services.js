@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import './Services.css';
 
 const Services = () => {
@@ -83,20 +84,58 @@ const Services = () => {
     setCurrentIndex((prevIndex) => (prevIndex === maxIndex ? 0 : prevIndex + 1));
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
   return (
-    <section className="services-section" id="services">
+    <motion.section
+      className="services-section"
+      id="services"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{}}
+    >
       <div className="container">
-        <div className="services-header">
+        <motion.div
+          className="services-header"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <h2 className="section-title">Our Services</h2>
           <p className="section-subtitle">
             Comprehensive staffing and recruiting solutions tailored to your business needs
           </p>
-        </div>
+        </motion.div>
 
         {isMobile ? (
-          <div className="services-mobile-grid">
+          <motion.div
+            className="services-mobile-grid"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {services.map((service, index) => (
-              <div key={index} className={`service-card service-card-${index}`}>
+              <motion.div
+                key={index}
+                className={`service-card service-card-${index}`}
+                variants={itemVariants}
+              >
                 <div className="service-icon">{service.icon}</div>
                 <h3 className="service-title css-color-title">{service.title}</h3>
                 <p className="service-description css-color-description">{service.description}</p>
@@ -106,20 +145,29 @@ const Services = () => {
                   ))}
                 </ul>
                 <button className="service-btn">Learn More</button>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         ) : (
           <div className="slider-container">
             <button className="slider-arrow left-arrow" onClick={prevSlide} disabled={leftDisabled} aria-label="Previous Slide">&#10094;</button>
 
             <div className="slider-window">
-              <div
+              <motion.div
                 className="services-grid"
                 style={{ width: gridWidth, transform: `translateX(-${currentIndex * slidePercent}%)` }}
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
               >
                 {services.map((service, index) => (
-                  <div key={index} className={`service-card service-card-${index}`} style={{ flexBasis: `${100 / visibleCards}%` }}>
+                  <motion.div
+                    key={index}
+                    className={`service-card service-card-${index}`}
+                    style={{ flexBasis: `${100 / visibleCards}%` }}
+                    variants={itemVariants}
+                  >
                     <div className="service-icon">{service.icon}</div>
                     <h3 className="service-title css-color-title">{service.title}</h3>
                     <p className="service-description css-color-description">{service.description}</p>
@@ -129,16 +177,16 @@ const Services = () => {
                       ))}
                     </ul>
                     <button className="service-btn">Learn More</button>
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </div>
 
             <button className="slider-arrow right-arrow" onClick={nextSlide} disabled={rightDisabled} aria-label="Next Slide">&#10095;</button>
           </div>
         )}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

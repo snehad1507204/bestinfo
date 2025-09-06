@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
+import { FaChevronDown } from 'react-icons/fa';
 import ServicesMenu from "./ServicesMenu";
 import './Navbar.css'; // Add your styles here
 
@@ -67,7 +68,7 @@ const MainNav = () => {
         {navItems.map((item, idx) => (
           <li
             key={idx}
-            className={`menu-item ${location.pathname === item.path ? 'active' : ''}`}
+            className={`menu-item ${item.name === 'Services' ? 'services' : ''} ${location.pathname === item.path ? 'active' : ''}`}
             onMouseEnter={() => setOpenMenu(idx)}
             onMouseLeave={() => setOpenMenu(null)}
           >
@@ -76,11 +77,16 @@ const MainNav = () => {
               onClick={() => setIsOpen(false)}
             >
               {item.name}
+              {item.name === 'Services' && <FaChevronDown style={{ marginLeft: '5px' }} />}
             </Link>
 
             {/* 👇 Agar component mila to render hoga */}
             {item.component && openMenu === idx && (
-              <div className="mega-menu">
+              <div
+                className="mega-menu"
+                onMouseEnter={() => setOpenMenu(idx)}
+                onMouseLeave={() => setOpenMenu(null)}
+              >
                 {item.component}
               </div>
             )}

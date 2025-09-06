@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './Partnerships.css';
 import Accenture from '../assets/Company-logo/accenture.png';
 import Amazon from '../assets/Company-logo/Amazon.png';
@@ -39,10 +40,34 @@ const logos = [
 ];
 
 const Partnerships = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }
+  };
+
   return (
-    <section className="partnerships-section">
+    <motion.section
+      className="partnerships-section"
+      initial="hidden"
+      whileInView="visible"
+      variants={containerVariants}
+      viewport={{}}
+    >
       <div className="partnerships-container">
-        <div className="partnerships-header">
+        <motion.div
+          className="partnerships-header"
+          variants={itemVariants}
+        >
           <h2 className="partnerships-title">Our Partnerships</h2>
           <p className="partnerships-subtitle">In Good Company</p>
           <p className="partnerships-description">
@@ -50,17 +75,24 @@ const Partnerships = () => {
             Full-stack capabilities coupled with depth and diversity of experience in leading platforms 
             that help organizations grow, innovate and thrive.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="logo-grid">
+        <motion.div
+          className="logo-grid"
+          variants={containerVariants}
+        >
           {logos.map((logo, index) => (
-            <div key={index} className="logo-item">
+            <motion.div
+              key={index}
+              className="logo-item"
+              variants={itemVariants}
+            >
               <img src={logo} alt={`Partner ${index + 1}`} />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
