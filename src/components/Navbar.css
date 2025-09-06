@@ -118,7 +118,7 @@
 
 .nav-links a:hover {
   color: #007bff;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .nav-links a.active {
@@ -155,20 +155,20 @@
 
 /* 🔹 Mega Menu for Services */
 .mega-menu {
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 80px;
   left: 50%;
   transform: translateX(-50%);
   width: 900px;
-  height: 570px;
+  height: auto;
   background: #fff;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   gap: 30px;
   border-radius: 6px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-  z-index: 200;
-  margin-top: 20px;
+  z-index: 2000;
+  margin-top: 6%;
 }
 
 .services-menu {
@@ -225,7 +225,7 @@
 }
 .service-item strong {
   display: block;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 4px;
   margin-top: 40px;
   text-align: center;

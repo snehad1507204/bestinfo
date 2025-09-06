@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const ServicesMenu = () => {
     const services = [
-        { title: "Health Care Pharma" },
-        { title: "IT Development" },
-        { title: "IT Recruitment" },
-        { title: "IT Training" },
-        { title: "Staffing-Non IT" },
+        { title: "Health Care Pharma", path: "/services/health-care" },
+        { title: "IT Development", path: "/services/it-development" },
+        { title: "IT Recruitment",path: "/services/it-recruitment"  },
+        { title: "IT Training",path: "/services/it-training"  },
+        { title: "Staffing-Non IT",path: "/services/staffing-non-it"  },
     ];
 
     return (
@@ -27,8 +27,10 @@ const ServicesMenu = () => {
             <div className="services-middle">
                 {services.map((srv, i) => (
                     <div key={i} className="service-item">
-                        <strong>{srv.title}</strong>
-                        <p>{srv.desc}</p>
+                        <Link to={srv.path} className="service-link">
+                            <strong>{srv.title}</strong>
+                            {srv.desc && <p>{srv.desc}</p>}
+                        </Link>
                     </div>
                 ))}
             </div>
