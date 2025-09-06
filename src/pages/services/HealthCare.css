@@ -1,0 +1,427 @@
+/* =============================
+   General Container
+============================= */
+.healthcare-container {
+  font-family: Arial, sans-serif;
+  color: #222;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* =============================
+   Top Hero Section
+============================= */
+.healthcare-hero {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.healthcare-hero h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #4b1e88;
+}
+
+.healthcare-hero p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #555;
+}
+
+/* =============================
+   Image Section
+============================= */
+.healthcare-image {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.healthcare-image img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* =============================
+   Specialized Section
+============================= */
+/* Section Background */
+.specialized-section {
+  background: linear-gradient(135deg, #f9f9ff, #eef3ff);
+  padding: 70px 20px;
+  text-align: center;
+}
+
+/* Section Heading */
+.specialized-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #4b1e88;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  animation: fadeDown 1s ease both;
+}
+
+/* Decorative underline for heading */
+.specialized-section h2::after {
+  content: '';
+  display: block;
+  margin: 10px auto 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #4b1e88, #6a2ed0);
+  border-radius: 2px;
+}
+
+/* Subheading Paragraph */
+.specialized-section p {
+  font-size: 16px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+  animation: fadeUp 1s ease both;
+}
+
+/* Fade Down Animation for Heading */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Main Layout */
+.specialized-layout {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 30px;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Divider Lines */
+.specialized-layout::before,
+.specialized-layout::after {
+  content: '';
+  position: absolute;
+  top: 5%;
+  bottom: 5%;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, #bbb, transparent);
+}
+
+.specialized-layout::before {
+  left: 33.33%;
+}
+
+.specialized-layout::after {
+  left: 66.66%;
+}
+
+/* Individual Item */
+.specialized-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 32%;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeUp 1s ease both;
+}
+
+/* Animation: Fade + Slide Up */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover Effects */
+.specialized-item:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Image Styling */
+.specialized-item img {
+  width: 220px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.specialized-item:hover img {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(75, 30, 136, 0.25);
+}
+
+/* Text Styling */
+.specialized-item .text h3 {
+  font-size: 20px;
+  color: #4b1e88;
+  margin: 12px 0 6px;
+  transition: color 0.3s ease;
+}
+
+.specialized-item:hover .text h3 {
+  color: #6a2ed0;
+}
+
+.specialized-item .text p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Left, Middle, Right Variations */
+.specialized-item.left {
+  flex-direction: column;
+  text-align: center;
+}
+
+.specialized-item.middle {
+  flex-direction: column;
+  text-align: center;
+}
+
+.specialized-item.right {
+  flex-direction: column-reverse;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .specialized-layout {
+    flex-direction: column;
+    max-width: 100%;
+    gap: 40px;
+  }
+  .specialized-layout::before,
+  .specialized-layout::after {
+    display: none;
+  }
+  .specialized-item {
+    flex-direction: column !important;
+    width: 100%;
+    text-align: center !important;
+  }
+  .specialized-item img {
+    width: 80%;
+  }
+}
+
+
+/* =============================
+   Stats Section
+============================= */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #8c6fb6;
+  color: #fff;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  flex: 1;
+  min-width: 200px;
+}
+
+.stat-box h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.stat-box p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* =============================
+   Agile Workforce Section
+============================= */
+.agile-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.agile-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.agile-section .highlight {
+  color: #6c2eb9;
+}
+
+.agile-section p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.agile-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 40px;
+  max-width: 700px;
+  text-align: left;
+}
+
+.agile-list li {
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #333;
+}
+
+.expert-btn-container {
+  text-align: center;
+}
+
+.expert-btn {
+  background-color: #6c2eb9;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.expert-btn:hover {
+  background-color: #4b1e88;
+}
+
+/* =============================
+   Expert Background video
+============================= */
+.expert-video {
+  position: relative;
+  width: 100%;
+  height: 500px; /* ya 60vh */
+  overflow: hidden;
+}
+.healthcare {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =============================
+   New Handshake Hero Section
+============================= */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  background: #f9f9f9;
+  gap: 40px;
+}
+
+.hero-left img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.hero-right {
+  max-width: 550px;
+}
+
+.hero-right h1 {
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 1.3;
+  color: #222;
+}
+
+.hero-right .highlight {
+  color: #6c2eb9;
+}
+
+.hero-right p {
+  font-size: 16px;
+  margin: 20px 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Reuse CTA button style */
+.hero-right .expert-btn {
+  background-color: #6c2eb9;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-right .expert-btn:hover {
+  background-color: #4b1e88;
+}
+
+/* =============================
+   Responsive Styles
+============================= */
+@media (max-width: 900px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stats-section {
+    flex-direction: column;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .hero-left img {
+    max-width: 100%;
+  }
+
+  .hero-right {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}

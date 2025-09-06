@@ -1,0 +1,260 @@
+.it-container {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.it-hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+.it-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.it-hero p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Image Section */
+.it-image {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.it-image img {
+  width: 80%;
+  max-width: 1000px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Specialized Section */
+.specialized-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.specialized-section h2 {
+  font-size: 2.2rem;
+  color: #203a43;
+  margin-bottom: 15px;
+}
+
+.specialized-section p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.specialized-layout {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.specialized-item {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.specialized-item:hover {
+  transform: translateY(-8px);
+}
+
+.specialized-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.specialized-item .text {
+  padding: 20px;
+}
+
+.specialized-item h3 {
+  font-size: 1.3rem;
+  color: #2c5364;
+  margin-bottom: 10px;
+}
+
+.specialized-item p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Stats Section */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 60px 0;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background: #2c5364;
+  color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 220px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.stat-box h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Agile Section */
+.agile-section {
+  padding: 60px 20px;
+  background: #f5f8fa;
+  text-align: center;
+}
+
+.agile-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #203a43;
+}
+
+.agile-section .highlight {
+  color: #2c5364;
+}
+
+.agile-section p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #555;
+}
+
+.agile-list {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  text-align: left;
+}
+
+.agile-list li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.agile-list strong {
+  color: #2c5364;
+}
+
+.expert-btn-container {
+  margin-top: 20px;
+}
+
+.expert-btn {
+  background: #2c5364;
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.expert-btn:hover {
+  background: #203a43;
+  transform: scale(1.05);
+}
+
+/* Video Background Section */
+.expert-video {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.it-video {
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Hire Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+}
+
+.hero-left img {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-right {
+  max-width: 600px;
+}
+
+.hero-right h1 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #203a43;
+}
+
+.hero-right .highlight {
+  color: #2c5364;
+}
+
+.hero-right p {
+  font-size: 1.05rem;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .specialized-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stats-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left img {
+    margin-bottom: 20px;
+  }
+}
