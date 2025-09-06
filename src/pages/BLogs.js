@@ -5,62 +5,62 @@ const BLogs = () => {
   const blogPosts = [
     {
       id: 1,
-      title: 'The Future of Web Development in 2024',
-      excerpt: 'Explore the latest trends and technologies shaping the future of web development, including AI integration, progressive web apps, and more.',
-      author: 'John Doe',
+      title: 'Top IT Skills in Demand for 2024',
+      excerpt: 'Discover the most sought-after technical skills that employers are looking for in IT professionals this year.',
+      author: 'Best Infosystems Team',
       date: 'December 15, 2023',
-      category: 'Web Development',
-      image: '🌐',
+      category: 'IT Recruitment',
+      image: '💼',
       readTime: '5 min read'
     },
     {
       id: 2,
-      title: 'Building Scalable Cloud Infrastructure',
-      excerpt: 'Learn best practices for building scalable and secure cloud infrastructure that can grow with your business needs.',
-      author: 'Jane Smith',
+      title: 'Building High-Performance IT Teams',
+      excerpt: 'Learn effective strategies for assembling and managing successful IT teams that drive business growth.',
+      author: 'Recruitment Experts',
       date: 'December 10, 2023',
-      category: 'Cloud Services',
-      image: '☁️',
+      category: 'Team Building',
+      image: '👥',
       readTime: '7 min read'
     },
     {
       id: 3,
-      title: 'AI-Powered Business Solutions',
-      excerpt: 'Discover how artificial intelligence is transforming business operations and creating new opportunities for innovation.',
-      author: 'Mike Johnson',
+      title: 'The Impact of AI on IT Staffing',
+      excerpt: 'Explore how artificial intelligence is revolutionizing recruitment processes and candidate matching.',
+      author: 'Tech Insights',
       date: 'December 5, 2023',
-      category: 'AI & ML',
+      category: 'AI & Recruitment',
       image: '🤖',
       readTime: '6 min read'
     },
     {
       id: 4,
-      title: 'Cybersecurity Best Practices',
-      excerpt: 'Essential cybersecurity practices every business should implement to protect against modern threats and vulnerabilities.',
-      author: 'Sarah Wilson',
+      title: 'Remote Work Trends in IT Industry',
+      excerpt: 'Essential insights into remote work arrangements and how they affect IT staffing and project management.',
+      author: 'Industry Analysts',
       date: 'November 28, 2023',
-      category: 'Security',
-      image: '🔒',
+      category: 'Remote Work',
+      image: '🏠',
       readTime: '8 min read'
     },
     {
       id: 5,
-      title: 'Mobile App Development Trends',
-      excerpt: 'Stay ahead of the curve with the latest mobile app development trends and technologies for 2024.',
-      author: 'David Brown',
+      title: 'Staffing Solutions for IT Projects',
+      excerpt: 'Comprehensive guide to finding the right IT talent for your project requirements and timelines.',
+      author: 'Project Managers',
       date: 'November 20, 2023',
-      category: 'Mobile Apps',
-      image: '📱',
+      category: 'Project Staffing',
+      image: '📋',
       readTime: '4 min read'
     },
     {
       id: 6,
-      title: 'Data-Driven Decision Making',
-      excerpt: 'How businesses can leverage data analytics to make informed decisions and drive growth.',
-      author: 'Emily Davis',
+      title: 'Career Development in IT Sector',
+      excerpt: 'How IT professionals can advance their careers through continuous learning and skill development.',
+      author: 'Career Advisors',
       date: 'November 15, 2023',
-      category: 'Data Analytics',
-      image: '📊',
+      category: 'Career Growth',
+      image: '📈',
       readTime: '5 min read'
     }
   ];
@@ -69,8 +69,8 @@ const BLogs = () => {
     <div className="blogs-page">
       <div className="container">
         <div className="blogs-header">
-          <h1>Our Blog</h1>
-          <p>Stay updated with the latest technology trends, insights, and best practices</p>
+          <h1>Insights & Updates</h1>
+          <p>Stay informed with the latest trends in IT staffing, recruitment strategies, and industry insights</p>
         </div>
 
         <div className="blogs-grid">

@@ -16,10 +16,7 @@ body {
   color: #333;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
+
 
 /* Container utility class */
 .container {
